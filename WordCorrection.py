@@ -4,11 +4,6 @@ from spacy.vocab import Vocab
 spacyNlp = spacy.load("en_core_web_md")
 
 
-# list_of_words = ['rapper ', 'upcoming ', 'catch']
-# apple = spacyNlp.vocab.strings["upcomming"]
-# print(apple in spacyNlp.vocab.strings)
-
-
 def correctword(word):
     wordlst = []
     wordlen = len(word)
@@ -19,13 +14,14 @@ def correctword(word):
         wordbackward = spacyNlp.vocab.strings[word[:(i + 1)]]
         wordbackward = wordbackward in spacyNlp.vocab.strings
         # print("wordbackward is {}  is it true {}".format(word[:(i+1)], wordbackward))
+        # wordmiddle = spacyNlp.vocab.strings[word[]]
 
         if wordforward:
             wordlst.append(word[i:])
 
         if wordbackward:
             wordlst.append(word[:(i + 1)])
-    # print("word list is ", wordlst)
+    print("word list is ", wordlst)
     return (wordlst, wordlen)
 
 
@@ -43,7 +39,7 @@ def colarword(tuple):
         return ["did not identified"]
 
 
-hashtag = "travelphotography"
+hashtag = "travelphotography2020"
 searchWord = colarword(correctword(hashtag))
 
 print("hashtag is #{} \nsearch terms are {}".format(hashtag," ".join(searchWord)))
