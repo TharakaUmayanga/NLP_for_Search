@@ -11,6 +11,7 @@ class ReWrite:
 
 
     def write(self):
+        ''' Re writng new sentence'''
         wordtypes = ['NN', 'NNS', "NNPS", "NNS", 'JJ', 'JJS']
         tokensentence = spacyNlp(self.sentence)
 

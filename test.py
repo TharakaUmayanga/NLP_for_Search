@@ -1,6 +1,7 @@
 from rewrite import ReWrite
 
-sentence = "Karenjit Kaur Vohra, known by her stage name Sunny Leone, is a model and an actress in the Indian film industry and a former pornographic actress. She has Canadian and American citizenship. She has also used the stage name Karen Malhotra"
+sentence = "Colombo is the commercial capital and largest city of Sri Lanka by population. According to the Brookings Institution, Colombo metropolitan area has a population of 5.6 million, and 752,993 in the city proper. It is the financial centre of the island and a tourist destination."
 
 print(" Original Sentence {} \n Rewrote sentence {}".format(sentence, ReWrite(sentence, 0.9).write()))
+
 

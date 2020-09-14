@@ -27,6 +27,7 @@ class BestWord:
         return words
 
     def getbestword(self):
+        ''' getting the nost syitable acronym and returning it'''
         bestword = ''
         smwords = self.getdatamuse()
         smwordstokens = [spacyNlp(smword) for smword in smwords]
@@ -40,14 +41,3 @@ class BestWord:
         return bestword
 
 
-# searchWord = "travel"
-#
-# simmilar = BestWord(searchWord).getdatamuse()
-#
-# simmilar2 = BestWord(searchWord).getfromnltk()
-#
-# bestWord = BestWord(searchWord, threshold=0.5).getbestword()
-#
-# print("datamuse {} \n NLTK {} \n  best words {}".format(simmilar, simmilar2,bestWord))
-#
-#
